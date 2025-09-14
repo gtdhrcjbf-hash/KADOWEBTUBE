@@ -1,50 +1,25 @@
 {
   "name": "KADOWEBTUBE_AUTOMATION",
   "version": "1.0.0",
-  "description": "YouTube automation backend system with proxy management and behavioral realism",
+  "description": "YouTube automation backend system - Lightweight version for deployment",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "migrate": "node src/database/migrate.js migrate",
     "seed": "node src/database/migrate.js seed",
-    "reset-db": "node src/database/migrate.js reset",
-    "test": "jest --detectOpenHandles",
-    "test:watch": "jest --watch --detectOpenHandles",
-    "test:coverage": "jest --coverage --detectOpenHandles",
-    "lint": "eslint src/ --ext .js",
-    "lint:fix": "eslint src/ --ext .js --fix",
-    "docker:build": "docker build -t kadowebtube-automation .",
-    "docker:run": "docker-compose up -d",
-    "docker:stop": "docker-compose down",
-    "pm2:start": "pm2 start ecosystem.config.js",
-    "pm2:stop": "pm2 stop kadowebtube-automation",
-    "pm2:restart": "pm2 restart kadowebtube-automation",
-    "pm2:logs": "pm2 logs kadowebtube-automation"
+    "reset-db": "node src/database/migrate.js reset"
   },
   "keywords": [
     "youtube",
     "automation",
-    "proxy",
-    "behavioral-realism",
     "nodejs",
     "express",
     "postgresql",
-    "redis",
-    "puppeteer",
-    "queue",
-    "analytics"
+    "redis"
   ],
   "author": "MiniMax Agent",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-username/kadowebtube-automation.git"
-  },
-  "bugs": {
-    "url": "https://github.com/your-username/kadowebtube-automation/issues"
-  },
-  "homepage": "https://github.com/your-username/kadowebtube-automation#readme",
   "engines": {
     "node": ">=16.0.0",
     "npm": ">=8.0.0"
@@ -62,64 +37,12 @@
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.32.1",
     "redis": "^4.6.7",
-    "bull": "^4.11.3",
-    "puppeteer": "^21.1.1",
-    "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2",
-    "puppeteer-extra-plugin-anonymize-ua": "^2.4.6",
     "axios": "^1.5.0",
     "moment": "^2.29.4",
     "winston": "^3.10.0",
-    "express-validator": "^7.0.1",
-    "stripe": "^13.5.0",
-    "user-agents": "^1.0.1426",
-    "proxy-agent": "^6.3.0"
+    "express-validator": "^7.0.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1",
-    "jest": "^29.6.2",
-    "supertest": "^6.3.3",
-    "eslint": "^8.47.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.28.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "sequelize-cli": "^6.6.1",
-    "@types/jest": "^29.5.4"
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "collectCoverageFrom": [
-      "src/**/*.js",
-      "!src/server.js",
-      "!src/**/*.test.js"
-    ],
-    "coverageReporters": [
-      "text",
-      "lcov",
-      "html"
-    ],
-    "testMatch": [
-      "**/__tests__/**/*.js",
-      "**/?(*.)+(spec|test).js"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/tests/setup.js"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "standard"
-    ],
-    "env": {
-      "node": true,
-      "jest": true,
-      "es6": true
-    },
-    "rules": {
-      "no-console": "warn",
-      "prefer-const": "error",
-      "no-unused-vars": "error"
-    }
+    "nodemon": "^3.0.1"
   }
 }
