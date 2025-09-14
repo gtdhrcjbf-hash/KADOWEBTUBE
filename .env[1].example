@@ -1,0 +1,69 @@
+# Database Configuration
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=kadowebtube_db
+DB_USER=postgres
+DB_PASSWORD=your_database_password
+
+# Redis Configuration
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=
+
+# JWT Secrets (Generate strong secrets!)
+JWT_SECRET=your_super_secret_jwt_key_change_this_in_production
+JWT_REFRESH_SECRET=your_super_secret_refresh_key_change_this_in_production
+JWT_EXPIRE_TIME=15m
+JWT_REFRESH_EXPIRE_TIME=7d
+
+# Encryption Key (Must be exactly 32 characters)
+ENCRYPTION_KEY=your_32_character_encryption_key_12
+
+# Server Configuration
+PORT=3000
+NODE_ENV=development
+ALLOWED_ORIGINS=http://localhost:3000,http://localhost:8080
+
+# Rate Limiting
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX_REQUESTS=100
+
+# Stripe Payment Configuration
+STRIPE_SECRET_KEY=sk_test_your_stripe_secret_key_here
+STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret_here
+
+# Email Configuration (Optional)
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_app_password
+
+# Queue Configuration
+QUEUE_REDIS_URL=redis://localhost:6379
+WORKER_CONCURRENCY=5
+
+# Proxy Configuration
+DEFAULT_PROXY_TIMEOUT=10000
+PROXY_HEALTH_CHECK_INTERVAL=300000
+
+# Account Warming Configuration
+WARMING_DELAY_MIN=30000
+WARMING_DELAY_MAX=300000
+WARMING_ACTIONS_PER_DAY=10
+
+# Security
+BCRYPT_ROUNDS=12
+SESSION_TIMEOUT=1800000
+
+# Monitoring
+ENABLE_METRICS=true
+METRICS_PORT=9090
+
+# Logging
+LOG_LEVEL=info
+LOG_FILE=logs/app.log
+ENABLE_REQUEST_LOGGING=true
+
+# Development Only
+ENABLE_CORS=true
+ENABLE_SWAGGER=true
