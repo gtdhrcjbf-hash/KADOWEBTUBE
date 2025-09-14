@@ -1,48 +1,30 @@
 {
   "name": "KADOWEBTUBE_AUTOMATION",
   "version": "1.0.0",
-  "description": "YouTube automation backend system - Lightweight version for deployment",
+  "description": "YouTube automation backend system",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
-    "migrate": "node src/database/migrate.js migrate",
-    "seed": "node src/database/migrate.js seed",
-    "reset-db": "node src/database/migrate.js reset"
+    "dev": "nodemon src/server.js"
   },
-  "keywords": [
-    "youtube",
-    "automation",
-    "nodejs",
-    "express",
-    "postgresql",
-    "redis"
-  ],
-  "author": "MiniMax Agent",
-  "license": "MIT",
   "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=8.0.0"
+    "node": "18.x",
+    "npm": "9.x"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "express-rate-limit": "^6.10.0",
-    "helmet": "^7.0.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "bcryptjs": "^2.4.3",
-    "jsonwebtoken": "^9.0.2",
-    "joi": "^17.9.2",
-    "pg": "^8.11.3",
-    "pg-hstore": "^2.3.4",
-    "sequelize": "^6.32.1",
-    "redis": "^4.6.7",
-    "axios": "^1.5.0",
-    "moment": "^2.29.4",
-    "winston": "^3.10.0",
-    "express-validator": "^7.0.1"
+    "express": "4.18.2",
+    "helmet": "7.1.0",
+    "cors": "2.8.5",
+    "express-rate-limit": "6.10.0",
+    "winston": "3.11.0",
+    "dotenv": "16.3.1",
+    "bcryptjs": "2.4.3",
+    "jsonwebtoken": "9.0.2",
+    "joi": "17.11.0",
+    "axios": "1.6.0",
+    "express-validator": "7.0.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "3.0.1"
   }
 }
